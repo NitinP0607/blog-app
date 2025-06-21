@@ -10,7 +10,7 @@ export default function Home() {
   useEffect(() => {
     // Fetch posts
     axios
-      .get("http://localhost:5000/api/posts")
+      .get("https://blog-app-backend-tmqo.onrender.com/api/posts")
       .then((res) => setPosts(res.data))
       .catch((err) => console.error(err));
     // Fetch logged-in user id from token
@@ -31,7 +31,7 @@ export default function Home() {
     }
 
     try {
-      await axios.delete(`http://localhost:5000/api/posts/${postId}`, {
+      await axios.delete(`https://blog-app-backend-tmqo.onrender.com/api/posts/${postId}`, {
         headers: { Authorization: `Bearer ${token}` },
       });
       setPosts(posts.filter((post) => post._id !== postId));

@@ -21,7 +21,7 @@ const Createpost = () => {
 
     try {
       await axios.post(
-        "http://localhost:5000/api/posts",
+        "https://blog-app-backend-tmqo.onrender.com/api/posts",
         { title, content },
         {
           headers: { Authorization: `Bearer ${token}` },

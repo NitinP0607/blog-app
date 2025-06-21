@@ -17,7 +17,7 @@ const Editpost = () => {
   // Fetch existing post data
   useEffect(() => {
     axios
-      .get(`http://localhost:5000/api/posts/${id}`)
+      .get(`https://blog-app-backend-tmqo.onrender.com/api/posts/${id}`)
       .then((res) => {
         setTitle(res.data.title);
         setContent(res.data.content);
@@ -35,7 +35,7 @@ const Editpost = () => {
 
     try {
       await axios.put(
-        `http://localhost:5000/api/posts/${id}`,
+        `https://blog-app-backend-tmqo.onrender.com/api/posts/${id}`,
         { title, content },
         { headers: { Authorization: `Bearer ${token}` } }
       );
