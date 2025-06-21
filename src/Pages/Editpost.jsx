@@ -2,7 +2,8 @@ import React from 'react'
 import { useState, useEffect } from "react";
 import { useParams, useNavigate } from "react-router-dom";
 import axios from "axios";
-import "../Styles/Forms.css"
+import "../style/forms.css"
+
 
 const Editpost = () => {
 
