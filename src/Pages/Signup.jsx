@@ -2,7 +2,7 @@ import React from 'react'
 import { useState } from "react";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
-import "../style/forms.css"
+import "../styles/forms.css"
 
 const Signup = () => {
     const [username, setUsername] = useState("");
